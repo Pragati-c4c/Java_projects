@@ -56,30 +56,7 @@ class Guesser
 		else{
 			guessNum=numinRange(guessNum);
 		}
-//		while(n>0)
-//		{
-//			if(guessNum<0||guessNum>10)
-//			{
-//				System.out.println("Please guess number from 1 to 10");
-//				guessNum=scan.nextInt();
-//				n--;
-//				if(guessNum>0&&guessNum<=10)
-//					break;
-//				
-//				else if(n>0)
-//				{
-//				    System.out.println(n+" "+"attempts left");
-//				    scan.nextLine();
-//				}
-//				else 
-//					{
-//					System.out.println("Start game again!");
-//					 guessNumber();
-//					}
-//				
-//			}
-//
-//		}
+
 		
 		     
 		return guessNum;	

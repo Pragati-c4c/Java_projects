@@ -1,45 +1,42 @@
 import java.util.Scanner;
 
-public class Panagram {
+public class prime_number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		 String s=sc.nextLine();
-		   s=s.toLowerCase();
-		 int ct=0;
-		 int arr[]=new int[26];
-		 for(int i=0;i<s.length();i++)
-		 {
-			 if(s.charAt(i)!=' ')
-			 {
-				 char c=s.charAt(i);
-
-				 arr[c-'a']++;
-			 }
+		 String sentence=sc.nextLine();
+		   sentence=sentence.toLowerCase();
+		   int ct=0;
+		   if(sentence.length()<26)
+	        {
+	           
+	            System.out.print("not panagram");
+	           
+	        }
+		else
+		{ 
+	           for(int i=97;i<=122;i++)
+	        {
+	          char c= (char)i;
+	            if(sentence.indexOf(c)==-1)
+	            {
+	                    
+	                    
+	               ct++;
+	                
+	            }
+	           
+	        }
+	        if(ct>0)
+	        	 System.out.print("not panagram");
+	        else
+	        	 System.out.print("panagram");
 			 
-			 
-		 }
-		 for(int i=0;i<s.length();i++) 
-		 {
-			 char c=s.charAt(i);
-
-			 if( c!=' '&& arr[c-'a']>=1 )
-			 {
-				
-				 ct++;
-				 
-				arr[s.charAt(i)-'a']=0;
-			 }
-		 }
-		 if(ct==26)
-		 {
-			 System.out.print("panagram");
-		 }
-		 else
-			 System.out.print("not panagram");
-		
-		 
+	        
+		   }
+	    }
 	}
+	
 
-}
+
